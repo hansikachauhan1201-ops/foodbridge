@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Impact & Sustainability Metrics | Food Bridge</title>
+  <meta name="description" content="Explore real-time data on meals redistributed, food waste prevented, CO2 emissions averted, and neighborhood distribution across Jaipur.">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation Bar (Multi-Page) -->
+  <header class="site-header" id="header">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="Food Bridge Homepage">
+        <span class="logo-leaf-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#245C42"/>
+            <path d="M11 21C16 17 21 12 26 6" stroke="#A8C99B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text-group">
+          <span class="logo-name">FOOD<span class="logo-accent">BRIDGE</span></span>
+          <span class="logo-tagline">Surplus to Smiles</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="explore-food.html" class="nav-link">Explore Food</a></li>
+          <li><a href="donate-food.html" class="nav-link">Donate Food</a></li>
+          <li><a href="ngo-register.html" class="nav-link">Join as NGO</a></li>
+          <li><a href="impact.html" class="nav-link active">Our Impact</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="ngo-register.html" class="btn btn-outline-nav">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <span>Join as NGO</span>
+        </a>
+        <a href="donate-food.html" class="btn btn-primary-nav">
+          <i class="fa-solid fa-plus-circle"></i>
+          <span>Donate Food</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="logo-leaf-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#245C42"/>
+            <path d="M11 21C16 17 21 12 26 6" stroke="#A8C99B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text-group">
+          <span class="logo-name">FOOD<span class="logo-accent">BRIDGE</span></span>
+        </span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="explore-food.html" class="drawer-link"><i class="fa-solid fa-utensils"></i> Explore Food Marketplace</a>
+      <a href="donate-food.html" class="drawer-link"><i class="fa-solid fa-bowl-food"></i> Donate Surplus Food</a>
+      <a href="ngo-register.html" class="drawer-link"><i class="fa-solid fa-hand-holding-heart"></i> Join as NGO Partner</a>
+      <a href="impact.html" class="drawer-link active"><i class="fa-solid fa-chart-line"></i> Our Impact Metrics</a>
+      <a href="contact.html" class="drawer-link"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+    </nav>
+
+    <div class="drawer-footer">
+      <a href="donate-food.html" class="btn btn-primary w-full"><i class="fa-solid fa-plus-circle"></i> Donate Surplus Food</a>
+      <a href="ngo-register.html" class="btn btn-secondary w-full mt-2"><i class="fa-solid fa-hand-holding-heart"></i> Join as NGO</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Dedicated Subpage Hero -->
+    <section class="page-hero">
+      <div class="page-hero-accent" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <span>/</span>
+          <span>Our Impact</span>
+        </nav>
+        <span class="section-tag tag-white"><i class="fa-solid fa-chart-pie"></i> Real-World Social & Environmental Metrics</span>
+        <h1 class="page-hero-title">Measuring Every Meal Saved Across Jaipur</h1>
+        <p class="page-hero-subtitle">
+          Food waste is both an ethical failure and an ecological emergency. See how Food Bridge converts commercial kitchen surplus into dignified sustenance and carbon reduction.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Metrics Counter Section -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-header text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-bolt"></i> Live Progress Milestone</span>
+          <h2 class="section-title">Collective Milestones Achieved</h2>
+          <p class="section-subtitle">
+            Simulated real-time figures reflecting partnership outputs across restaurants, banquet halls, and non-profit centers in Jaipur.
+          </p>
+        </div>
+
+        <!-- 4 Stat Counters Grid (Targeted by IntersectionObserver in script.js) -->
+        <div class="impact-stat-grid" id="impactStatGrid">
+          <div class="impact-card">
+            <div class="impact-icon-circle bg-orange">
+              <i class="fa-solid fa-bowl-rice"></i>
+            </div>
+            <div class="impact-value-wrap">
+              <span class="impact-counter" data-target="142500">0</span>
+              <span class="impact-plus">+</span>
+            </div>
+            <h3 class="impact-title">Wholesome Meals Served</h3>
+            <p class="impact-description">Dignified, untouched buffet & kitchen meals distributed to homeless shelters and slum schools.</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-icon-circle bg-forest">
+              <i class="fa-solid fa-weight-hanging"></i>
+            </div>
+            <div class="impact-value-wrap">
+              <span class="impact-counter" data-target="210000">0</span>
+              <span class="impact-plus"> kg</span>
+            </div>
+            <h3 class="impact-title">Surplus Food Rescued</h3>
+            <p class="impact-description">Safe cooked food, artisan breads, and fresh vegetables diverted from municipal landfills.</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-icon-circle bg-sage" style="color: var(--color-forest-dark);">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <div class="impact-value-wrap">
+              <span class="impact-counter" data-target="380">0</span>
+              <span class="impact-plus">+</span>
+            </div>
+            <h3 class="impact-title">Food Donor Partners</h3>
+            <p class="impact-description">Jaipur restaurants, cafes, luxury banquet halls, and bakeries actively listing surplus batches.</p>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-icon-circle bg-charcoal">
+              <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <div class="impact-value-wrap">
+              <span class="impact-counter" data-target="165">0</span>
+              <span class="impact-plus">+</span>
+            </div>
+            <h3 class="impact-title">Verified NGO Chapters</h3>
+            <p class="impact-description">Registered charitable trusts and volunteer networks conducting daily food collections.</p>
+          </div>
+        </div>
+
+        <!-- Environmental Impact Highlight Banner -->
+        <div class="impact-eco-banner">
+          <div class="eco-icon-wrap">
+            <i class="fa-solid fa-earth-asia"></i>
+          </div>
+          <div class="eco-text">
+            <h4>Environmental Preservation: Saving Resources from Methane Decomposition</h4>
+            <p>
+              When edible food decomposes in landfills, it generates methane—a greenhouse gas 28x more potent than CO2. By redirecting 210,000 kg of food, the Food Bridge model has prevented approximately <strong>525 Metric Tons of CO2 equivalent emissions</strong> and preserved over <strong>1.8 Million Liters of virtual water</strong> used during agricultural production.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Progress Breakdown Charts Section -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="impact-charts-grid">
+
+          <!-- Chart 1: Food Category Distribution -->
+          <div class="chart-card">
+            <h3 class="chart-card-title">
+              <i class="fa-solid fa-utensils text-orange"></i> Food Category Redistribution
+            </h3>
+            <p class="chart-card-sub">
+              Proportion of rescued food categorized by culinary type across our partner network.
+            </p>
+
+            <div class="progress-item-list">
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Indian Meals & Cooked Curries</span>
+                  <span>42%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-orange" style="width: 42%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Artisan Bakery, Buns & Loaves</span>
+                  <span>24%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-forest" style="width: 24%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Fresh Fruits & Farm Vegetables</span>
+                  <span>18%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-sage" style="width: 18%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Packaged Food, Cereals & Grains</span>
+                  <span>10%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-charcoal" style="width: 10%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Evening Snacks & Beverages</span>
+                  <span>6%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-tomato" style="width: 6%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart 2: Jaipur Geographic Distribution -->
+          <div class="chart-card">
+            <h3 class="chart-card-title">
+              <i class="fa-solid fa-map-location-dot text-forest"></i> Jaipur Neighborhood Distribution
+            </h3>
+            <p class="chart-card-sub">
+              Geographical distribution of food claims across key residential and commercial hubs.
+            </p>
+
+            <div class="progress-item-list">
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Malviya Nagar & GT Corridor</span>
+                  <span>28%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-forest" style="width: 28%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Vaishali Nagar & Queens Road</span>
+                  <span>22%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-orange" style="width: 22%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Mansarovar & Metro Belt</span>
+                  <span>20%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-sage" style="width: 20%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Jagatpura & Institutional Area</span>
+                  <span>14%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-charcoal" style="width: 14%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>C-Scheme & MI Road District</span>
+                  <span>10%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-tomato" style="width: 10%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-item-header">
+                  <span>Tonk Road & Gopalpura Bypass</span>
+                  <span>6%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-orange" style="width: 6%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Impact Stories Strip -->
+    <section class="section" style="background-color: var(--color-cream-alt);">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-tag"><i class="fa-solid fa-quote-left"></i> Real Voices</span>
+          <h2 class="section-title">Stories Behind the Numbers</h2>
+          <p class="section-subtitle">
+            How real-time redistribution transforms excess food from a logistical burden into heartfelt gratitude.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+            <p class="testimonial-text">
+              "We used to discard 20 to 30 kg of pristine lunch thali preparations when the afternoon buffet closed. With Food Bridge, local NGO volunteers pick it up within 45 minutes using insulated thermal carriers. It’s an honor to know that food nourishes children every single day."
+            </p>
+            <div class="author-row">
+              <div class="author-avatar-circle">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div class="author-meta">
+                <h5>Chef Rajesh Sharma</h5>
+                <span>Executive Chef, Royal Jaipur Thali Lounge</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+            <p class="testimonial-text">
+              "As an NGO operating three night shelters in Jaipur, our daily challenge was balancing grocery costs. Food Bridge gives us dignified access to fresh wholesome meals from bakeries and restaurants. The transparent claim system makes coordination seamless."
+            </p>
+            <div class="author-row">
+              <div class="author-avatar-circle">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <div class="author-meta">
+                <h5>Pooja Meena</h5>
+                <span>Shelter Director, Jaipur Aashray Foundation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+            <p class="testimonial-text">
+              "Bakery goods have a strict shelf life. Before Food Bridge, surplus loaves went to waste. Now, evening surpluses are claimed in minutes by community kitchens. We receive automated impact certificates for our CSR documentation."
+            </p>
+            <div class="author-row">
+              <div class="author-avatar-circle">
+                <i class="fa-solid fa-bread-slice"></i>
+              </div>
+              <div class="author-meta">
+                <h5>Vikramaditya Rathore</h5>
+                <span>Founder, The French Crust Bakery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-content">
+            <span class="badge-sub-pill"><i class="fa-solid fa-heart-circle-bolt"></i> Join The Movement</span>
+            <h2 class="cta-title">Help Us Reach 200,000 Meals Saved</h2>
+            <p class="cta-subtitle">
+              Whether you are a food business looking to minimize waste or an NGO working on the frontlines, Food Bridge is free and open to partner with.
+            </p>
+            <div class="cta-actions">
+              <a href="donate-food.html" class="btn btn-primary">
+                <i class="fa-solid fa-plus-circle"></i> Donate Surplus Food
+              </a>
+              <a href="ngo-register.html" class="btn btn-secondary">
+                <i class="fa-solid fa-hand-holding-heart"></i> Register Your NGO
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about-col">
+          <a href="index.html" class="brand-logo" aria-label="Food Bridge Footer Logo">
+            <span class="logo-leaf-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#A8C99B"/>
+                <path d="M11 21C16 17 21 12 26 6" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="logo-text-group">
+              <span class="logo-name text-white">FOOD<span class="logo-accent">BRIDGE</span></span>
+              <span class="logo-tagline text-sage">Surplus to Smiles</span>
+            </span>
+          </a>
+          <p class="footer-mission-text">
+            "Turning surplus into smiles, one meal at a time." Food Bridge creates a modern food-tech ecosystem connecting commercial food donors with verified local NGOs.
+          </p>
+          <div class="footer-pill-badge">
+            <i class="fa-solid fa-leaf"></i> Zero Food Waste Initiative &bull; Jaipur Chapter
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Platform Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="explore-food.html"><i class="fa-solid fa-chevron-right"></i> Explore Food Marketplace</a></li>
+            <li><a href="donate-food.html"><i class="fa-solid fa-chevron-right"></i> Donate Surplus Food</a></li>
+            <li><a href="ngo-register.html"><i class="fa-solid fa-chevron-right"></i> Join as NGO Partner</a></li>
+            <li><a href="impact.html"><i class="fa-solid fa-chevron-right"></i> Our Impact Dashboard</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">For Partners</h4>
+          <ul class="footer-nav-list">
+            <li><a href="donate-food.html"><i class="fa-solid fa-chevron-right"></i> Restaurant Onboarding</a></li>
+            <li><a href="ngo-register.html"><i class="fa-solid fa-chevron-right"></i> Verified NGO Network</a></li>
+            <li><a href="impact.html"><i class="fa-solid fa-chevron-right"></i> Carbon Offset Metrics</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Frequently Asked Questions</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Support Helpline</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-subtext">Subscribe to our demonstration newsletter for local social impact updates.</p>
+
+          <form id="newsletterForm" class="newsletter-form-inline">
+            <div class="newsletter-input-wrap">
+              <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email..." required aria-label="Email for newsletter" />
+              <button type="submit" class="btn btn-primary btn-newsletter" aria-label="Subscribe to newsletter">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <span class="field-error-msg" id="newsletterError"></span>
+          </form>
+
+          <div class="academic-footer-notice">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Academic Project Note:</strong>
+            <p>Designed and built as a senior college showcase. All food listings and registrations are stored locally in the browser (<code>localStorage</code>).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          &copy; 2026 Food Bridge Platform. Developed for Academic Social Impact & University Project Showcase.
+        </p>
+        <div class="footer-legal-row">
+          <span>Non-Commercial Demonstration</span>
+          <span class="dot-sep">&bull;</span>
+          <a href="contact.html">Privacy Charter</a>
+          <span class="dot-sep">&bull;</span>
+          <a href="contact.html">Food Safety Protocols</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast Container & Back to Top -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Master Multi-Page Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

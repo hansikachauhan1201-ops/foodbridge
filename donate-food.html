@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Surplus Food | Food Bridge</title>
+  <meta name="description" content="List your restaurant, cafe or bakery surplus food in 60 seconds to notify verified Jaipur NGOs for quick, dignified community distribution.">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation Bar (Multi-Page) -->
+  <header class="site-header" id="header">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="Food Bridge Homepage">
+        <span class="logo-leaf-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#245C42"/>
+            <path d="M11 21C16 17 21 12 26 6" stroke="#A8C99B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text-group">
+          <span class="logo-name">FOOD<span class="logo-accent">BRIDGE</span></span>
+          <span class="logo-tagline">Surplus to Smiles</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="explore-food.html" class="nav-link">Explore Food</a></li>
+          <li><a href="donate-food.html" class="nav-link active">Donate Food</a></li>
+          <li><a href="ngo-register.html" class="nav-link">Join as NGO</a></li>
+          <li><a href="impact.html" class="nav-link">Our Impact</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="ngo-register.html" class="btn btn-outline-nav">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <span>Join as NGO</span>
+        </a>
+        <a href="donate-food.html" class="btn btn-primary-nav">
+          <i class="fa-solid fa-plus-circle"></i>
+          <span>Donate Food</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="logo-leaf-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#245C42"/>
+            <path d="M11 21C16 17 21 12 26 6" stroke="#A8C99B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text-group">
+          <span class="logo-name">FOOD<span class="logo-accent">BRIDGE</span></span>
+        </span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="explore-food.html" class="drawer-link"><i class="fa-solid fa-utensils"></i> Explore Food Marketplace</a>
+      <a href="donate-food.html" class="drawer-link active"><i class="fa-solid fa-bowl-food"></i> Donate Surplus Food</a>
+      <a href="ngo-register.html" class="drawer-link"><i class="fa-solid fa-hand-holding-heart"></i> Join as NGO Partner</a>
+      <a href="impact.html" class="drawer-link"><i class="fa-solid fa-chart-line"></i> Our Impact Metrics</a>
+      <a href="contact.html" class="drawer-link"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+    </nav>
+
+    <div class="drawer-footer">
+      <a href="donate-food.html" class="btn btn-primary w-full"><i class="fa-solid fa-plus-circle"></i> Donate Surplus Food</a>
+      <a href="ngo-register.html" class="btn btn-secondary w-full mt-2"><i class="fa-solid fa-hand-holding-heart"></i> Join as NGO</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Dedicated Subpage Hero -->
+    <section class="page-hero">
+      <div class="page-hero-accent" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <span>/</span>
+          <span>Donate Surplus Food</span>
+        </nav>
+        <span class="section-tag tag-white"><i class="fa-solid fa-bowl-food"></i> For Restaurants & Bakeries</span>
+        <h1 class="page-hero-title">List Your Surplus Food in 60 Seconds</h1>
+        <p class="page-hero-subtitle">
+          Transform untouched, chef-crafted culinary preparations into life-changing meals for nearby community shelters in Jaipur.
+        </p>
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Success Alert (Hidden until submission) -->
+        <div id="donationSuccessAlert" class="how-cta-strip mb-3" style="display:none; background-color: #E8F8F5; border-color: #A3E4D7; margin-bottom: 2.5rem;">
+          <div class="how-cta-text">
+            <h4 style="color: #117A65;"><i class="fa-solid fa-circle-check"></i> Donation Published Successfully!</h4>
+            <p style="color: #145A32;">Your surplus batch has been added to the live database (localStorage) and is now visible to registered NGOs.</p>
+          </div>
+          <div class="how-cta-buttons">
+            <a href="explore-food.html" class="btn btn-secondary">
+              <i class="fa-solid fa-arrow-right"></i> View Listing on Explore Food
+            </a>
+          </div>
+        </div>
+
+        <div class="form-page-layout">
+          <!-- Left Guidance Pane -->
+          <div class="form-info-pane">
+            <span class="section-tag tag-white"><i class="fa-solid fa-shield-virus"></i> Partner Guidelines</span>
+            <h2 class="section-title text-white">Why Donate Through Food Bridge?</h2>
+            <p class="donate-card-intro">
+              Don’t let your culinary creations go into the dumpster. In less than a minute, notify verified Jaipur NGOs ready to pick up untouched portions.
+            </p>
+
+            <div class="donation-perks-list">
+              <div class="d-perk">
+                <div class="d-perk-icon"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <strong>Instant Marketplace Listing</strong>
+                  <p>Your listing is added to the live discovery marketplace immediately upon submission (saved to browser <code>localStorage</code>).</p>
+                </div>
+              </div>
+
+              <div class="d-perk">
+                <div class="d-perk-icon"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <strong>Zero Logistics & Transportation Cost</strong>
+                  <p>Nearby NGOs arrive with insulated thermal containers directly at your kitchen door.</p>
+                </div>
+              </div>
+
+              <div class="d-perk">
+                <div class="d-perk-icon"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <strong>FSSAI-Compliant Safe Handling</strong>
+                  <p>Certified hygiene guidelines and temperature windows protect both donor and recipient.</p>
+                </div>
+              </div>
+
+              <div class="d-perk">
+                <div class="d-perk-icon"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <strong>Verifiable ESG / CSR Metrics</strong>
+                  <p>Track your total kilograms of food waste averted and carbon emissions reduced.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Demonstration Notice -->
+            <div class="donation-demo-box">
+              <div class="demo-box-head">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <strong>College Demonstration Notice</strong>
+              </div>
+              <p>
+                This form validates your inputs and stores your donation in your browser's local storage. You will immediately see it in the Explore Food marketplace. In production, this triggers an automated SMS & notification dispatch to nearby NGOs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Donation Form -->
+          <div class="styled-form-card">
+            <div class="form-title-row">
+              <div>
+                <h3 class="form-card-heading">Surplus Food Donation Form</h3>
+                <p class="form-card-sub">All fields marked with <span class="req">*</span> are required.</p>
+              </div>
+              <button type="button" class="btn btn-outline btn-xs" id="resetDonationFormBtn" title="Reset all form fields">
+                <i class="fa-solid fa-eraser"></i> Clear Form
+              </button>
+            </div>
+
+            <form id="donationForm" novalidate>
+              <!-- Row 1: Restaurant Name & Contact Person -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="restaurantName" class="form-label">
+                    <i class="fa-solid fa-shop"></i> Restaurant / Food Business Name <span class="req">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="restaurantName" 
+                    name="restaurantName" 
+                    class="form-input" 
+                    placeholder="e.g. Royal Jaipur Thali Lounge" 
+                    required 
+                  />
+                  <span class="field-error-msg" id="restaurantNameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactPerson" class="form-label">
+                    <i class="fa-solid fa-user"></i> Contact Person <span class="req">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contactPerson" 
+                    name="contactPerson" 
+                    class="form-input" 
+                    placeholder="e.g. Chef Rajesh Sharma" 
+                    required 
+                  />
+                  <span class="field-error-msg" id="contactPersonError"></span>
+                </div>
+              </div>
+
+              <!-- Row 2: Email & Phone -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="restaurantEmail" class="form-label">
+                    <i class="fa-solid fa-envelope"></i> Email Address <span class="req">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="restaurantEmail" 
+                    name="restaurantEmail" 
+                    class="form-input" 
+                    placeholder="e.g. kitchen@royalthali.com" 
+                    required 
+                  />
+                  <span class="field-error-msg" id="restaurantEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="phoneNumber" class="form-label">
+                    <i class="fa-solid fa-phone"></i> Contact Phone Number <span class="req">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="phoneNumber" 
+                    name="phoneNumber" 
+                    class="form-input" 
+                    placeholder="e.g. +91 98290 12345" 
+                    required 
+                  />
+                  <span class="field-error-msg" id="phoneNumberError"></span>
+                </div>
+              </div>
+
+              <!-- Row 3: Food Name & Category -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="foodName" class="form-label">
+                    <i class="fa-solid fa-utensils"></i> Food Item Name <span class="req">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="foodName" 
+                    name="foodName" 
+                    class="form-input" 
+                    placeholder="e.g. Paneer Butter Masala & Steamed Jeera Rice" 
+                    required 
+                  />
+                  <span class="field-error-msg" id="foodNameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="foodCategory" class="form-label">
+                    <i class="fa-solid fa-layer-group"></i> Food Category <span class="req">*</span>
+                  </label>
+                  <select id="foodCategory" name="foodCategory" class="form-select" required>
+                    <option value="">Select Category...</option>
+                    <option value="Indian Meals">Indian Meals (Curries, Rice, Roti)</option>
+                    <option value="Bakery & Bread">Bakery & Bread (Loaves, Buns, Cakes)</option>
+                    <option value="Fruits & Vegetables">Fruits & Vegetables (Fresh Produce)</option>
+                    <option value="Packaged Food">Packaged Food (Grains, Canned, Sealed)</option>
+                    <option value="Snacks & Beverages">Snacks & Beverages (Samosas, Juices)</option>
+                  </select>
+                  <span class="field-error-msg" id="foodCategoryError"></span>
+                </div>
+              </div>
+
+              <!-- Row 4: Quantity & Pickup Street Address -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="foodQuantity" class="form-label">
+                    <i class="fa-solid fa-scale-balanced"></i> Quantity Available <span class="req">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="foodQuantity" 
+                    name="foodQuantity" 
+                    class="form-input" 
+                    placeholder="e.g. 45 Servings (approx. 18 kg)" 
+                    required 
+                  />
+                  <span class="field-error-msg" id="foodQuantityError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="pickupArea" class="form-label">
+                    <i class="fa-solid fa-city"></i> Jaipur Area / Neighborhood <span class="req">*</span>
+                  </label>
+                  <select id="pickupArea" name="pickupArea" class="form-select" required>
+                    <option value="">Select Area...</option>
+                    <option value="Malviya Nagar">Malviya Nagar</option>
+                    <option value="Vaishali Nagar">Vaishali Nagar</option>
+                    <option value="Mansarovar">Mansarovar</option>
+                    <option value="Jagatpura">Jagatpura</option>
+                    <option value="C-Scheme">C-Scheme</option>
+                    <option value="Tonk Road">Tonk Road</option>
+                    <option value="Other Jaipur Area">Other Jaipur Area</option>
+                  </select>
+                  <span class="field-error-msg" id="pickupAreaError"></span>
+                </div>
+              </div>
+
+              <!-- Row 5: Pickup Address -->
+              <div class="form-group">
+                <label for="pickupAddress" class="form-label">
+                  <i class="fa-solid fa-map-pin"></i> Exact Pickup Street Address <span class="req">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="pickupAddress" 
+                  name="pickupAddress" 
+                  class="form-input" 
+                  placeholder="e.g. Plot 42, Gaurav Tower Road, Near Crystal Court" 
+                  required 
+                />
+                <span class="field-error-msg" id="pickupAddressError"></span>
+              </div>
+
+              <!-- Row 6: Preparation Time & Pickup Deadline -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="prepTime" class="form-label">
+                    <i class="fa-regular fa-clock"></i> Food Preparation Time <span class="req">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="prepTime" 
+                    name="prepTime" 
+                    class="form-input" 
+                    placeholder="e.g. Today, 2:30 PM (Lunch buffet close)" 
+                    required 
+                  />
+                  <span class="field-error-msg" id="prepTimeError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="pickupDeadline" class="form-label">
+                    <i class="fa-solid fa-hourglass-half"></i> Pickup Deadline <span class="req">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="pickupDeadline" 
+                    name="pickupDeadline" 
+                    class="form-input" 
+                    placeholder="e.g. Today before 6:30 PM" 
+                    required 
+                  />
+                  <span class="field-error-msg" id="pickupDeadlineError"></span>
+                </div>
+              </div>
+
+              <!-- Optional Image URL -->
+              <div class="form-group">
+                <label for="foodImageUrl" class="form-label">
+                  <i class="fa-regular fa-image"></i> Food Image URL (Optional)
+                  <span class="label-hint">- Leave blank to use our delicious category-matched default photo</span>
+                </label>
+                <input 
+                  type="url" 
+                  id="foodImageUrl" 
+                  name="foodImageUrl" 
+                  class="form-input" 
+                  placeholder="https://images.unsplash.com/..." 
+                />
+                <span class="field-error-msg" id="foodImageUrlError"></span>
+              </div>
+
+              <!-- Description -->
+              <div class="form-group">
+                <label for="foodDescription" class="form-label">
+                  <i class="fa-solid fa-align-left"></i> Food Description & Safe Handling Notes <span class="req">*</span>
+                </label>
+                <textarea 
+                  id="foodDescription" 
+                  name="foodDescription" 
+                  rows="3" 
+                  class="form-textarea" 
+                  placeholder="Describe dishes, temperature status (e.g. hot insulated buffet trays / refrigerated), allergen info (nuts/dairy), and packaging container state..." 
+                  required
+                ></textarea>
+                <span class="field-error-msg" id="foodDescriptionError"></span>
+              </div>
+
+              <!-- Safety Checkbox -->
+              <div class="form-checkbox-wrap">
+                <input type="checkbox" id="foodSafetyCheck" required class="custom-checkbox" />
+                <label for="foodSafetyCheck" class="checkbox-text">
+                  I certify under penalty of food safety guidelines that this surplus food was prepared under clean, hygienic conditions, remained untouched by diners, and is fit for human consumption. <span class="req">*</span>
+                </label>
+                <span class="field-error-msg" id="foodSafetyCheckError"></span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary w-full btn-submit" id="submitDonationBtn">
+                <i class="fa-solid fa-plus-circle"></i>
+                <span>Publish Surplus Batch to Marketplace</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about-col">
+          <a href="index.html" class="brand-logo" aria-label="Food Bridge Footer Logo">
+            <span class="logo-leaf-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#A8C99B"/>
+                <path d="M11 21C16 17 21 12 26 6" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="logo-text-group">
+              <span class="logo-name text-white">FOOD<span class="logo-accent">BRIDGE</span></span>
+              <span class="logo-tagline text-sage">Surplus to Smiles</span>
+            </span>
+          </a>
+          <p class="footer-mission-text">
+            "Turning surplus into smiles, one meal at a time." Food Bridge creates a modern food-tech ecosystem connecting commercial food donors with verified local NGOs.
+          </p>
+          <div class="footer-pill-badge">
+            <i class="fa-solid fa-leaf"></i> Zero Food Waste Initiative &bull; Jaipur Chapter
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Platform Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="explore-food.html"><i class="fa-solid fa-chevron-right"></i> Explore Food Marketplace</a></li>
+            <li><a href="donate-food.html"><i class="fa-solid fa-chevron-right"></i> Donate Surplus Food</a></li>
+            <li><a href="ngo-register.html"><i class="fa-solid fa-chevron-right"></i> Join as NGO Partner</a></li>
+            <li><a href="impact.html"><i class="fa-solid fa-chevron-right"></i> Our Impact Dashboard</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">For Partners</h4>
+          <ul class="footer-nav-list">
+            <li><a href="donate-food.html"><i class="fa-solid fa-chevron-right"></i> Restaurant Onboarding</a></li>
+            <li><a href="ngo-register.html"><i class="fa-solid fa-chevron-right"></i> Verified NGO Network</a></li>
+            <li><a href="impact.html"><i class="fa-solid fa-chevron-right"></i> Carbon Offset Metrics</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Frequently Asked Questions</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Support Helpline</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-subtext">Subscribe to our demonstration newsletter for local social impact updates.</p>
+
+          <form id="newsletterForm" class="newsletter-form-inline">
+            <div class="newsletter-input-wrap">
+              <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email..." required aria-label="Email for newsletter" />
+              <button type="submit" class="btn btn-primary btn-newsletter" aria-label="Subscribe to newsletter">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <span class="field-error-msg" id="newsletterError"></span>
+          </form>
+
+          <div class="academic-footer-notice">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Academic Project Note:</strong>
+            <p>Designed and built as a senior college showcase. All food listings and registrations are stored locally in the browser (<code>localStorage</code>).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          &copy; 2026 Food Bridge Platform. Developed for Academic Social Impact & University Project Showcase.
+        </p>
+        <div class="footer-legal-row">
+          <span>Non-Commercial Demonstration</span>
+          <span class="dot-sep">&bull;</span>
+          <a href="contact.html">Privacy Charter</a>
+          <span class="dot-sep">&bull;</span>
+          <a href="contact.html">Food Safety Protocols</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

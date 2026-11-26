@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Available Food | Food Bridge Marketplace</title>
+  <meta name="description" content="Discover surplus safe food batches listed by restaurants and bakeries across Jaipur available for immediate NGO pickup.">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (Multi-Page) -->
+  <header class="site-header" id="header">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="Food Bridge Homepage">
+        <span class="logo-leaf-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#245C42"/>
+            <path d="M11 21C16 17 21 12 26 6" stroke="#A8C99B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text-group">
+          <span class="logo-name">FOOD<span class="logo-accent">BRIDGE</span></span>
+          <span class="logo-tagline">Surplus to Smiles</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="explore-food.html" class="nav-link active">Explore Food</a></li>
+          <li><a href="donate-food.html" class="nav-link">Donate Food</a></li>
+          <li><a href="ngo-register.html" class="nav-link">Join as NGO</a></li>
+          <li><a href="impact.html" class="nav-link">Our Impact</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="ngo-register.html" class="btn btn-outline-nav">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <span>Join as NGO</span>
+        </a>
+        <a href="donate-food.html" class="btn btn-primary-nav">
+          <i class="fa-solid fa-plus-circle"></i>
+          <span>Donate Food</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="logo-leaf-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#245C42"/>
+            <path d="M11 21C16 17 21 12 26 6" stroke="#A8C99B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text-group">
+          <span class="logo-name">FOOD<span class="logo-accent">BRIDGE</span></span>
+        </span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="explore-food.html" class="drawer-link active"><i class="fa-solid fa-utensils"></i> Explore Food Marketplace</a>
+      <a href="donate-food.html" class="drawer-link"><i class="fa-solid fa-bowl-food"></i> Donate Surplus Food</a>
+      <a href="ngo-register.html" class="drawer-link"><i class="fa-solid fa-hand-holding-heart"></i> Join as NGO Partner</a>
+      <a href="impact.html" class="drawer-link"><i class="fa-solid fa-chart-line"></i> Our Impact Metrics</a>
+      <a href="contact.html" class="drawer-link"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+    </nav>
+
+    <div class="drawer-footer">
+      <a href="donate-food.html" class="btn btn-primary w-full"><i class="fa-solid fa-plus-circle"></i> Donate Surplus Food</a>
+      <a href="ngo-register.html" class="btn btn-secondary w-full mt-2"><i class="fa-solid fa-hand-holding-heart"></i> Join as NGO</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Dedicated Subpage Hero -->
+    <section class="page-hero">
+      <div class="page-hero-accent" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <span>/</span>
+          <span>Explore Food Marketplace</span>
+        </nav>
+        <span class="section-tag tag-white"><i class="fa-solid fa-bolt"></i> Real-Time Food Marketplace</span>
+        <h1 class="page-hero-title">Discover Available Surplus Food</h1>
+        <p class="page-hero-subtitle">
+          Browse fresh, safe, untouched food batches listed by restaurants, bakeries, and caterers across Jaipur. Registered NGOs can claim batches for community distribution.
+        </p>
+      </div>
+    </section>
+
+    <!-- Marketplace Main Section -->
+    <section class="section marketplace-section">
+      <div class="container">
+        <!-- Controls Card (Search + Location + Status + Categories) -->
+        <div class="dashboard-controls-card">
+          <div class="controls-top-row">
+            <!-- Search Bar -->
+            <div class="search-bar-wrap">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input 
+                type="text" 
+                id="foodSearchInput" 
+                class="dashboard-search-input" 
+                placeholder="Search food item (Paneer, Biryani, Bread), restaurant, or location..." 
+                aria-label="Search available food listings"
+              />
+              <button class="clear-search-btn" id="clearSearchBtn" aria-label="Clear search input" style="display:none;">&times;</button>
+            </div>
+
+            <!-- Location Filter Dropdown -->
+            <div class="filter-dropdown-wrap">
+              <label for="locationFilter" class="filter-label"><i class="fa-solid fa-location-dot text-orange"></i> Area:</label>
+              <select id="locationFilter" class="custom-select-box" aria-label="Filter food by Jaipur neighborhood">
+                <option value="all">All Jaipur Locations</option>
+                <option value="Malviya Nagar">Malviya Nagar</option>
+                <option value="Vaishali Nagar">Vaishali Nagar</option>
+                <option value="Mansarovar">Mansarovar</option>
+                <option value="Jagatpura">Jagatpura</option>
+                <option value="C-Scheme">C-Scheme</option>
+                <option value="Tonk Road">Tonk Road</option>
+              </select>
+            </div>
+
+            <!-- Status Filter Dropdown -->
+            <div class="filter-dropdown-wrap">
+              <label for="statusFilter" class="filter-label"><i class="fa-solid fa-filter text-forest"></i> Status:</label>
+              <select id="statusFilter" class="custom-select-box" aria-label="Filter by availability status">
+                <option value="all">All Statuses</option>
+                <option value="Available">Available Only</option>
+                <option value="Claimed">Claimed / Reserved</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Category Pills Row -->
+          <div class="category-pill-row">
+            <span class="category-row-label">Category:</span>
+            <div class="category-pills-wrap" id="categoryPillContainer" role="radiogroup" aria-label="Category filter">
+              <button class="cat-pill active" data-category="all" role="radio" aria-checked="true">
+                <i class="fa-solid fa-layer-group"></i> All Items
+              </button>
+              <button class="cat-pill" data-category="Indian Meals" role="radio" aria-checked="false">
+                <i class="fa-solid fa-bowl-rice"></i> Indian Meals
+              </button>
+              <button class="cat-pill" data-category="Bakery & Bread" role="radio" aria-checked="false">
+                <i class="fa-solid fa-bread-slice"></i> Bakery & Bread
+              </button>
+              <button class="cat-pill" data-category="Fruits & Vegetables" role="radio" aria-checked="false">
+                <i class="fa-solid fa-carrot"></i> Fruits & Vegetables
+              </button>
+              <button class="cat-pill" data-category="Packaged Food" role="radio" aria-checked="false">
+                <i class="fa-solid fa-box"></i> Packaged Food
+              </button>
+              <button class="cat-pill" data-category="Snacks & Beverages" role="radio" aria-checked="false">
+                <i class="fa-solid fa-mug-hot"></i> Snacks & Beverages
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meta Bar -->
+        <div class="dashboard-meta-bar">
+          <div class="meta-left">
+            <span id="dashboardCountBadge" class="results-count-badge">Showing 6 Food Batches</span>
+            <span class="active-filter-indicator" id="activeFilterTag" style="display:none;"></span>
+          </div>
+          <div class="meta-right" style="display:flex; align-items:center; gap:0.75rem;">
+            <button class="btn btn-outline btn-xs" id="resetDashboardBtn" title="Reset default sample listings">
+              <i class="fa-solid fa-rotate-left"></i> Reset Demo Data
+            </button>
+            <span class="demo-tag-pill"><i class="fa-solid fa-database"></i> DEMO DATA (localStorage)</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Food Grid -->
+        <div class="food-marketplace-grid" id="foodGrid" aria-live="polite">
+          <!-- Populated dynamically via js/script.js -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state-card" id="emptyState" style="display:none;">
+          <div class="empty-icon-wrap">
+            <i class="fa-solid fa-bowl-food"></i>
+          </div>
+          <h3>No Available Food Listings Found</h3>
+          <p>We couldn't find any listings matching your current search query or active filters. Try adjusting your search keywords, switching categories, or resetting filters.</p>
+          <button class="btn btn-primary" id="emptyResetBtn"><i class="fa-solid fa-rotate-left"></i> Reset All Filters</button>
+        </div>
+
+        <!-- Bottom Call to Action for Food Businesses -->
+        <div class="how-cta-strip mt-3" style="margin-top: 4rem;">
+          <div class="how-cta-text">
+            <h4>Are you a restaurant or bakery with surplus food right now?</h4>
+            <p>Publish your available batch in 60 seconds. Verified local NGOs will be notified for pickup.</p>
+          </div>
+          <div class="how-cta-buttons">
+            <a href="donate-food.html" class="btn btn-primary"><i class="fa-solid fa-plus-circle"></i> Donate Food Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL 1: FOOD ITEM DETAILS MODAL -->
+  <div class="modal-overlay" id="foodDetailsModal" role="dialog" aria-modal="true" aria-labelledby="modalFoodTitle" style="display:none;">
+    <div class="modal-box">
+      <button class="modal-close-icon" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-img-container">
+        <img id="modalFoodImg" src="" alt="Food item photo" class="modal-hero-img" />
+        <span id="modalCategoryBadge" class="modal-cat-badge">Category</span>
+        <span id="modalStatusBadge" class="modal-status-badge">Available</span>
+      </div>
+
+      <div class="modal-content-body">
+        <div class="modal-title-row">
+          <div>
+            <h3 id="modalFoodTitle" class="modal-food-title">Food Item Name</h3>
+            <p id="modalRestaurant" class="modal-restaurant-sub"><i class="fa-solid fa-shop"></i> Restaurant Name</p>
+          </div>
+          <div class="modal-qty-chip">
+            <span class="qty-sub">Quantity</span>
+            <strong id="modalQuantity">0 Servings</strong>
+          </div>
+        </div>
+
+        <div class="modal-details-grid">
+          <div class="modal-detail-item">
+            <span class="m-label"><i class="fa-solid fa-location-dot text-orange"></i> Pickup Location:</span>
+            <strong id="modalLocation" class="m-val">—</strong>
+          </div>
+          <div class="modal-detail-item">
+            <span class="m-label"><i class="fa-solid fa-hourglass-half text-tomato"></i> Pickup Deadline:</span>
+            <strong id="modalDeadline" class="m-val text-tomato">—</strong>
+          </div>
+          <div class="modal-detail-item">
+            <span class="m-label"><i class="fa-regular fa-clock text-forest"></i> Prepared Time:</span>
+            <strong id="modalPrepTime" class="m-val">—</strong>
+          </div>
+          <div class="modal-detail-item">
+            <span class="m-label"><i class="fa-solid fa-phone text-forest"></i> Donor Contact:</span>
+            <strong id="modalContact" class="m-val">—</strong>
+          </div>
+          <div class="modal-detail-item full-width">
+            <span class="m-label"><i class="fa-solid fa-align-left text-orange"></i> Food Description & Handling:</span>
+            <p id="modalDescription" class="m-desc">—</p>
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button type="button" class="btn btn-outline" id="modalCancelBtn">Close</button>
+          <button type="button" class="btn btn-primary" id="modalRequestFoodBtn">
+            <i class="fa-solid fa-hand-holding-heart"></i> Request Food (NGO Claim)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: NGO FOOD REQUEST CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="requestConfirmModal" role="dialog" aria-modal="true" aria-labelledby="requestModalTitle" style="display:none;">
+    <div class="modal-box modal-box-sm">
+      <button class="modal-close-icon" id="requestModalCloseBtn" aria-label="Close modal">&times;</button>
+
+      <div class="request-modal-header">
+        <div class="request-icon-circle bg-orange-soft">
+          <i class="fa-solid fa-truck-fast text-orange"></i>
+        </div>
+        <h3 id="requestModalTitle" class="request-modal-title">Confirm NGO Food Request</h3>
+        <p class="request-modal-sub">You are requesting this surplus food batch for charitable community distribution.</p>
+      </div>
+
+      <div class="request-item-snapshot">
+        <div class="snapshot-img-wrap">
+          <img id="reqSnapshotImg" src="" alt="Batch thumbnail" />
+        </div>
+        <div class="snapshot-details">
+          <strong id="reqSnapshotTitle">Food Item Name</strong>
+          <span id="reqSnapshotRestaurant"><i class="fa-solid fa-shop"></i> Restaurant Name</span>
+          <div class="snapshot-tags">
+            <span id="reqSnapshotQty" class="badge-snapshot">0 Servings</span>
+            <span id="reqSnapshotLocation" class="badge-snapshot-loc"><i class="fa-solid fa-location-dot"></i> Location</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="ngoClaimForm" class="styled-form mt-3" novalidate>
+        <div class="form-group">
+          <label for="claimingNgoName" class="form-label">
+            <i class="fa-solid fa-building-ngo"></i> Your NGO / Organization Name <span class="req">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="claimingNgoName" 
+            name="claimingNgoName" 
+            class="form-input" 
+            placeholder="e.g. Umeed Sansthan / Apna Aashray" 
+            required 
+          />
+          <span class="field-error-msg" id="claimingNgoNameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="claimingCoordinator" class="form-label">
+            <i class="fa-solid fa-user-tie"></i> Coordinator Name & Phone <span class="req">*</span>
+          </label>
+          <input 
+            type="text" 
+            id="claimingCoordinator" 
+            name="claimingCoordinator" 
+            class="form-input" 
+            placeholder="e.g. Rahul Sharma (+91 98290 54321)" 
+            required 
+          />
+          <span class="field-error-msg" id="claimingCoordinatorError"></span>
+        </div>
+
+        <div class="form-checkbox-wrap">
+          <input type="checkbox" id="claimCommitmentCheck" required class="custom-checkbox" />
+          <label for="claimCommitmentCheck" class="checkbox-text">
+            We confirm our volunteer team will pick up this food using insulated carriers before the stated pickup deadline. <span class="req">*</span>
+          </label>
+          <span class="field-error-msg" id="claimCommitmentCheckError"></span>
+        </div>
+
+        <div class="modal-footer-actions mt-3">
+          <button type="button" class="btn btn-outline" id="claimCancelBtn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="claimConfirmBtn">
+            <i class="fa-solid fa-check-circle"></i> Confirm & Reserve Batch
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Universal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about-col">
+          <a href="index.html" class="brand-logo" aria-label="Food Bridge Footer Logo">
+            <span class="logo-leaf-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 26C8 18 14 12 26 6C26 18 18 24 6 26Z" fill="#A8C99B"/>
+                <path d="M11 21C16 17 21 12 26 6" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M4 27C11 24 21 24 28 27" stroke="#E76F36" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="logo-text-group">
+              <span class="logo-name text-white">FOOD<span class="logo-accent">BRIDGE</span></span>
+              <span class="logo-tagline text-sage">Surplus to Smiles</span>
+            </span>
+          </a>
+          <p class="footer-mission-text">
+            "Turning surplus into smiles, one meal at a time." Food Bridge creates a modern food-tech ecosystem connecting commercial food donors with verified local NGOs.
+          </p>
+          <div class="footer-pill-badge">
+            <i class="fa-solid fa-leaf"></i> Zero Food Waste Initiative &bull; Jaipur Chapter
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Platform Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="explore-food.html"><i class="fa-solid fa-chevron-right"></i> Explore Food Marketplace</a></li>
+            <li><a href="donate-food.html"><i class="fa-solid fa-chevron-right"></i> Donate Surplus Food</a></li>
+            <li><a href="ngo-register.html"><i class="fa-solid fa-chevron-right"></i> Join as NGO Partner</a></li>
+            <li><a href="impact.html"><i class="fa-solid fa-chevron-right"></i> Our Impact Dashboard</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">For Partners</h4>
+          <ul class="footer-nav-list">
+            <li><a href="donate-food.html"><i class="fa-solid fa-chevron-right"></i> Restaurant Onboarding</a></li>
+            <li><a href="ngo-register.html"><i class="fa-solid fa-chevron-right"></i> Verified NGO Network</a></li>
+            <li><a href="impact.html"><i class="fa-solid fa-chevron-right"></i> Carbon Offset Metrics</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Frequently Asked Questions</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Support Helpline</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="footer-subtext">Subscribe to our demonstration newsletter for local social impact updates.</p>
+
+          <form id="newsletterForm" class="newsletter-form-inline">
+            <div class="newsletter-input-wrap">
+              <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email..." required aria-label="Email for newsletter" />
+              <button type="submit" class="btn btn-primary btn-newsletter" aria-label="Subscribe to newsletter">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <span class="field-error-msg" id="newsletterError"></span>
+          </form>
+
+          <div class="academic-footer-notice">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Academic Project Note:</strong>
+            <p>Designed and built as a senior college showcase. All food listings and registrations are stored locally in the browser (<code>localStorage</code>).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          &copy; 2026 Food Bridge Platform. Developed for Academic Social Impact & University Project Showcase.
+        </p>
+        <div class="footer-legal-row">
+          <span>Non-Commercial Demonstration</span>
+          <span class="dot-sep">&bull;</span>
+          <a href="contact.html">Privacy Charter</a>
+          <span class="dot-sep">&bull;</span>
+          <a href="contact.html">Food Safety Protocols</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
